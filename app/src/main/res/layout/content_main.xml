@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.mwiesbauer.supervision.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Excavation Stopped"
+                android:id="@+id/bExcavation"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="0dp"
+                android:nestedScrollingEnabled="false"
+                android:onClick="startActivity" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add"
+                android:id="@+id/bAdd"
+                android:layout_below="@+id/bExcavation"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="0dp"
+                android:onClick="startActivity" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+                android:id="@+id/bDelete"
+                android:layout_alignTop="@+id/bAdd"
+                android:layout_centerHorizontal="true"
+                android:onClick="startActivity" />
+
+        </LinearLayout>
+
+        <Chronometer
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chronometer"
+            android:textStyle="bold"
+            android:textSize="24dp"
+            android:layout_alignBottom="@+id/bExcavation"
+            android:layout_alignParentEnd="true"
+            android:layout_row="0"
+            android:layout_column="8" />
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listView"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="false"
+        android:layout_marginTop="50dp"
+        android:smoothScrollbar="true"
+        android:drawSelectorOnTop="false"
+        android:listSelector="#957070"
+        android:choiceMode="singleChoice"
+        android:clickable="true" />
+
+</RelativeLayout>
